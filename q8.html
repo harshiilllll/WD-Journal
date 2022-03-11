@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>8. WRITE JQUERY CODE TO SHOW CALLBACK METHODS. (SHOW ATLEAST 5 METHODS).</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $("#hide").click(()=>{
+                $(".demo").hide(4000,()=>{
+                    alert("This is hide callback")
+                });
+            })
+            $("#show").click(()=>{
+                $(".demo").show(4000,()=>{
+                    alert("This is show callback")
+                });
+            })
+            $("#fadeOut").click(()=>{
+                $(".demo").fadeOut(4000,()=>{
+                    alert("This is fadeOut callback")
+                });
+            })
+            $("#fadeIn").click(()=>{
+                $(".demo").fadeIn(4000,()=>{
+                    alert("This is fadeIn callback")
+                });
+            })
+            $("#slideToggle").click(()=>{
+                $(".demo").slideToggle(4000,()=>{
+                    alert("This is slideToggle callback")
+                });
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            height: 300px;
+            width: 600px;
+            background-color: cyan;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="demo"></div>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeIn">fadeIn</button>
+    <button id="slideToggle">slideToggle</button>
+    
+</body>
+</html>

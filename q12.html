@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. WRITE JQUERY CODE TO SHOW append(), prepend(), after(), before()).</title>
+</head>
+<script src="JQuery/jquery-3.6.0.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#append").click(()=>{
+            $(".demo").append("<h1>This is append</h1>")
+        })
+        $("#prepend").click(()=>{
+            $(".demo").prepend("<h1>This is prepend</h1>")
+        })
+        $("#after").click(()=>{
+            $(".demo").after("<h1>This is after</h1>")
+        })
+        $("#before").click(()=>{
+            $(".demo").before("<h1>This is before</h1>")
+        })
+    })
+
+</script>
+
+<style>
+    .demo{
+        border: 2px solid #000;
+        padding: 20px;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <div class="demo">
+        hi
+    </div>
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+    <button id="after">After</button>
+    <button id="before">Before</button>
+</body>
+</html>

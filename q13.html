@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13. WRITE JQUERY CODE TO DEMONSTRATE remove() AND empty() METHODS.</title>
+
+    <script src="JQuery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#remove").click(() => {
+                $(".hello").remove()
+            })
+            $("#empty").click(() => {
+                $(".demo").empty()
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="demo">
+        <h1 class="hello">Hello</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum modi quod magnam, similique facere sint
+            commodi, </p>
+    </div>
+    <button id="remove">Remove</button>
+    <button id="empty">Empty</button>
+
+</body>
+
+</html>

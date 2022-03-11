@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>11. WRITE JQUERY CODE TO DEMONSTRATE HTML SET METHODS.(text(), attr(), html(), val()).</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            $("#text").click(() => {
+                let val = $("p").text("HIIIIIIIIIIII");
+            });
+
+            $("#attr").click(() => {
+                let val = $("#div").attr("class", "div");
+            })
+
+            $("#html").click(() => {
+                let val = $(".main").html("<h2>Heading2</h2>");
+            })
+
+            $("#val").click(() => {
+                let val = $("#input").val("Jay Hind");
+            });
+        });
+    </script>
+    <style>
+       .div{
+          height: 200px;
+          width: 400px;
+          background-color: yellow;
+       }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <p>Hello World!!</p>
+        <button id="text">SET TEXT</button>
+        <hr>
+        <div id="div" class="my-5">SET ATTRIBUTE OF THIS ELEMENT BY CLICKING</div>
+        <button id="attr">SET ATTRIBUTE</button>
+        <hr>
+        <button id="html">SET HTML</button>
+        <hr>
+        <input id="input" type="text">
+        <button id="val">SET VALUE OF INPUT</button>
+    </div>
+
+</body>
+
+</html>

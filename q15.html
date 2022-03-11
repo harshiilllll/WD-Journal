@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. WRITE JQUERY CODE TO DEMONSTRATE addClass(), removeClass() and toggleClass().</title>
+
+    <script src="JQuery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#addClass").click(() => {
+                $(".demo").addClass("sybca")
+            })
+            $("#removeClass").click(() => {
+                $(".demo").removeClass("sybca")
+            })
+            $("#toggleClass").click(() => {
+                $(".demo").toggleClass("sybca")
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            border: 1px solid #000;
+        }
+        .sybca{
+            background-color: cyan;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo">Hello</div>
+    <button id="addClass">addClass</button>
+    <button id="removeClass">removeClass</button>
+    <button id="toggleClass">toggleClass</button>
+
+</body>
+
+</html>

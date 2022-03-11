@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>10. WRITE JQUERY CODE TO DEMONSTRATE HTML GET METHODS.(text(), attr(), html(), val()).</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            $("#text").click(() => {
+                let val = $("p").text();
+                alert(val);
+            });
+
+            $("#attr").click(() => {
+                let val = $("#div").attr("class");
+                alert(val);
+            })
+
+            $("#html").click(() => {
+                let val = $(".main").html();
+                alert(val);
+            })
+
+            $("#val").click(() => {
+                let val = $("#input").val();
+                alert(val);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <p>Hello World!!</p>
+        <button id="text">GET TEXT</button>
+        <hr>
+        <div id="div" class="div my-5">GET ATTRIBUTE OF THIS ELEMENT BY CLICKING</div>
+        <button id="attr">GET ATTRIBUTE</button>
+        <hr>
+        <button id="html">GET HTML</button>
+        <hr>
+        <input id="input" type="text">
+        <button id="val">GET VALUE OF INPUT</button>
+    </div>
+
+</body>
+
+</html>

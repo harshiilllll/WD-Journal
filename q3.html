@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRITE AN AJAX  CODE TO READ THE FOLLOWING JSON FILE.</title>
+
+    <script>
+        function readJSON() {
+            const xhr = new XMLHttpRequest();
+            xhr.onload = function() {
+                const myObj = JSON.parse(this.responseText);
+                for(i = 0; i < myObj.employees.length; i++){
+                    document.getElementById("demo").innerHTML = myObj.employees[i]["firstName"] + "&nbsp;" + myObj.employees[i]["lastName"];
+                    console.table(myObj.employees[i]);
+                }
+            }
+            xhr.open("GET", "data.json", true);
+            xhr.send();
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <button onclick="readJSON()">Click</button>
+</body>
+</html>

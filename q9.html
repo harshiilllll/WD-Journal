@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>9. WRITE JQUERY CODE TO SHOW CHAINING METHODS (hide(), show(), fadeTo(), slideUp(), slideDown()).</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $("#btn").click(()=>{
+                $(".demo")
+                .hide(4000)
+                .show(2000)
+                .fadeTo(3000, 0.4)
+                .slideUp(6000)
+                .slideDown(1000);
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            height: 300px;
+            width: 600px;
+            background-color: hotpink;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="demo"></div>
+    <button id="btn">CLICK</button>
+    
+</body>
+</html>

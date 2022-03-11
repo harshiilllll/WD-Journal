@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>4. WRITE JQUERY CODE TO show(), hide() AND toggle() METHODS.</title>
+
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $("#hide").click(()=>{
+                $(".demo").hide(4000);
+            })
+            $("#show").click(()=>{
+                $(".demo").show(4000);
+            })
+            $("#toggle").click(()=>{
+                $(".demo").toggle(4000);
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            height: 300px;
+            width: 600px;
+            background-color: darkcyan;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="demo"></div>
+    <button id="hide">CLICK TO HIDE</button>
+    <button id="show">CLICK TO SHOW</button>
+    <button id="toggle">CLICK TO TOGGLE</button>
+</body>
+</html>

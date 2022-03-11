@@ -1,0 +1,14 @@
+{
+  "name": "wd-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon q19.js"
+  },
+  "author": "harshil",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

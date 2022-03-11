@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRITE AN AJAX CODE TO READ THE FOLLOWING XML FILE.</title>
+
+    <script>
+
+        function readFile() {
+            const xhr = new XMLHttpRequest();
+
+            xhr.onload = function () {
+                xmlFunc(this);
+            }
+            xhr.open("get", "data.xml", true);
+            xhr.send();
+        }
+
+        function xmlFunc(xml) {
+            const xmlDoc = xml.responseXML;
+            const x = xmlDoc.getElementsByTagName("stud");
+            let table = `<tr><th>Name</th>
+                             <th>Age</th>
+                             <th>Email</th>
+                             <th>Cell</th>
+                             <th>Address</th>
+                        </tr>`;
+
+            for (let i = 0; i < x.length; i++) {
+                table += `
+                    <tr><td> ${x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue} </td>
+                        <td> ${x[i].getElementsByTagName("age")[0].childNodes[0].nodeValue} </td>
+                        <td> ${x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue} </td>
+                        <td> ${x[i].getElementsByTagName("cell")[0].childNodes[0].nodeValue} </td>
+                        <td> ${x[i].getElementsByTagName("address")[0].childNodes[0].nodeValue} </td>
+                    </tr>
+                `;
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+
+    </script>
+
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="demo"></table>
+    <button onclick="readFile();">Click</button>
+    
+</body>
+
+</html>

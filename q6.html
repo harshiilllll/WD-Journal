@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>6. WRITE JQUERY CODE TO slideUp(),slideDown() AND slideToggle() METHODS.</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $("#slideUp").click(()=>{
+                $(".demo").slideUp(4000);
+            })
+            $("#slideDown").click(()=>{
+                $(".demo").slideDown(4000);
+            })
+            $("#slideToggle").click(()=>{
+                $(".demo").slideToggle(4000);
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            height: 300px;
+            width: 600px;
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="demo"></div>
+    <button id="slideUp">CLICK TO slideUp</button>
+    <button id="slideDown">CLICK TO slideDown</button>
+    <button id="slideToggle">CLICK TO slideToggle</button>
+    
+</body>
+</html>

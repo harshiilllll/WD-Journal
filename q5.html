@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>5. WRITE JQUERY CODE TO fadeIn(),fadeOut() AND fadeToggle() METHODS.</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $("#fadeIn").click(()=>{
+                $(".demo").fadeIn(4000);
+            })
+            $("#fadeOut").click(()=>{
+                $(".demo").fadeOut(4000);
+            })
+            $("#fadeToggle").click(()=>{
+                $(".demo").fadeToggle(4000);
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            height: 300px;
+            width: 600px;
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="demo"></div>
+    <button id="fadeIn">CLICK TO fadeIn</button>
+    <button id="fadeOut">CLICK TO fadeOut</button>
+    <button id="fadeToggle">CLICK TO fadeToggle</button>
+    
+</body>
+</html>

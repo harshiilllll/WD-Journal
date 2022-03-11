@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>7. WRITE JQUERY CODE TO SHOW fadeTo() METHOD.</title>
+    <script src="JQuery/jquery-3.6.0.js"></script>
+
+    <script>
+        $(document).ready(()=>{
+            $("#fadeTo").click(()=>{
+                $(".demo").fadeTo(4000, 0.5);
+            })
+        })
+    </script>
+
+    <style>
+        .demo{
+            height: 300px;
+            width: 600px;
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="demo"></div>
+    <button id="fadeTo">CLICK TO fadeTo</button>
+    
+</body>
+</html>

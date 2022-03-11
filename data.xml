@@ -1,0 +1,16 @@
+<students>
+    <stud>
+        <name>Ram</name>
+        <age>500000</age>
+        <email>ram@gmail.com</email>
+        <cell>9876543210</cell>
+        <address>Ayodhya</address>
+    </stud>
+    <stud>
+        <name>Laxman</name>
+        <age>300000</age>
+        <email>laxman@gmail.com</email>
+        <cell>9988776655</cell>
+        <address>Ayodhya</address>
+    </stud>
+</students>
